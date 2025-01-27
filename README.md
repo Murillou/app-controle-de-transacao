@@ -1,51 +1,67 @@
-# React + TypeScript + Vite
+Controle de Transações
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um aplicativo de controle de transações desenvolvido com React, utilizando JSON Server para simular uma API e Styled Components para estilização.
 
-Currently, two official plugins are available:
+💻 Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React: Biblioteca JavaScript para criação de interfaces.
 
-## Expanding the ESLint configuration
+Styled Components: Biblioteca para estilização com CSS-in-JS.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+JSON Server: Ferramenta para criar uma API fake rapidamente.
 
-- Configure the top-level `parserOptions` property like this:
+TypeScript: Superset do JavaScript que adiciona tipagem estática.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Vite: Ferramenta de build rápida para desenvolvimento de aplicações modernas.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+📋 Funcionalidades
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Cadastro de novas transações financeiras (entrada e saída).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# app-controle-de-transacao
+Listagem de transações cadastradas.
+
+Cálculo automático do saldo total.
+
+Filtro de transações por descrição.
+
+🚀 Como executar o projeto
+
+Para executar o projeto localmente, siga os passos abaixo:
+
+Pré-requisitos
+
+Node.js instalado.
+
+Gerenciador de pacotes como npm, yarn ou pnpm.
+
+Passos
+
+Clone o repositório:
+
+git clone git@github.com:Murillou/app-controle-de-transacao.git
+
+Navegue até o diretório do projeto:
+
+cd app-controle-de-transacao
+
+Instale as dependências:
+
+npm install
+
+ou, se estiver utilizando yarn:
+
+yarn
+
+ou pnpm:
+
+pnpm install
+
+Inicie o JSON Server para a API fake:
+
+npm run server
+
+Em outro terminal, inicie o projeto:
+
+npm run dev
+
+Abra o navegador no endereço fornecido (geralmente http://localhost:5173).
